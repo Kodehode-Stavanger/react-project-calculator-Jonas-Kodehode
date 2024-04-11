@@ -1,7 +1,7 @@
 
 
-export default function Button({input, handleClick}) {
+export default function Button({input, handleClick, styles}) {
     return (
-        <button value={input} onClick={handleClick}>{input}</button>
+        <button className={styles} value={input} onClick={handleClick}>{input}</button>
     )
 }

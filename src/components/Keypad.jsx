@@ -1,8 +1,9 @@
 import { useState } from "react"
 import Button from "./Button"
+import styles from "./Keypad.module.css"
 
 
-export default function Keypad({input, setInput, setCalculate}) {
+export default function Keypad({input, setInput, setCalculate, setResult}) {
     
     const buttons = [
         "7", "8", "9", "DEL",
@@ -20,6 +21,7 @@ export default function Keypad({input, setInput, setCalculate}) {
             setInput(input.slice(0, -1))
         } else if (value === "RESET") {
             setInput(""); 
+            setResult("")
         } else if (value === "=") {
             setCalculate(true);
         }
@@ -29,12 +31,12 @@ export default function Keypad({input, setInput, setCalculate}) {
     }
 
    return (
-    <>
+    <div className={styles.gridContainer}>
     {buttons.map((button, i) => {
-        return <Button key={i} input={button} handleClick={handleClick}/>
+        return <Button styles={styles.button} key={i} input={button} handleClick={handleClick}/>
     })}
     
-    </>
+    </div>
    )
 
 }

@@ -1,49 +1,70 @@
-export default function Arithmetics({input}) {
+import { useEffect } from "react";
+
+export default function Arithmetics({input, calculate, setCalculate, result, setResult}) {
+    useEffect(() => {
+
+        if (!calculate) {
+            return;
+        }
+
     const operators = ["+", "-", "*", "/"];
     let operatorIndex = -1;
     let operator = "";
 
 
     for (let i = 0; i < input.length; i++) {
-        if (operators.includes(input[i])) { 
+        if (operators.includes(input[i])) {
             operatorIndex = i;
             operator = input[i];
             break;
         }
     }
 
+
    
     if (operatorIndex === -1) {
-        return ("");
-    }
+        setResult("")
+        setCalculate(false)
+        return
+    } 
 
     const firstNumber = parseFloat(input.substring(0, operatorIndex));
     const secondNumber = parseFloat(input.substring(operatorIndex + 1));
 
 
 
-    let result;
+    let calculationResult;
 
     
     switch (operator) {
         case '+':
-            result = firstNumber + secondNumber;
+            calculationResult = firstNumber + secondNumber;
             break;
         case '-':
-            result = firstNumber - secondNumber;
+            calculationResult = firstNumber - secondNumber;
             break;
         case '*':
-            result = firstNumber * secondNumber;
+            calculationResult = firstNumber * secondNumber;
             break;
         case '/':
-            result = firstNumber / secondNumber;
+            calculationResult = firstNumber / secondNumber;
             break;
         default:
             return null; 
     }
 
+
+
+        if (!isNaN(calculationResult)) {
+            setResult(calculationResult)
+        } else {
+            return null
+        }
+
+        setCalculate(false)
+        
+
+    },  [calculate, input])
    
-    return (
-            <h3>{result}</h3>
-    );
+    return null
 }
