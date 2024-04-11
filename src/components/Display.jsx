@@ -1,6 +1,6 @@
 
 
-export default function Display({input}) {
+export default function Display({input, result}) {
     
     return (
         <div>

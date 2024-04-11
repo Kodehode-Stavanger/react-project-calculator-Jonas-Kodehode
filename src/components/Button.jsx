@@ -1,7 +1,7 @@
 
 
-export default function Button({input, getValue}) {
+export default function Button({input, handleClick}) {
     return (
-        <button value={input} onClick={getValue}>{input}</button>
+        <button value={input} onClick={handleClick}>{input}</button>
     )
 }
