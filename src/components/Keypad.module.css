@@ -2,27 +2,74 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    max-width: 374px;
+    max-width: 375px;
+    background-color: hsl(223, 31%, 20%);
+    padding: 1rem;
+    border-radius: 5px;
 }
 
 .gridContainer :nth-last-child(1) {
     grid-column: 3 / span 2;
     background-color: hsl(6, 63%, 50%);
     color: hsl(0, 0%, 100%);
+    box-shadow: 0 3px hsl(6, 70%, 34%);
+}
+
+.gridContainer :nth-last-child(1):hover {
+    background-color: hsl(6, 93%, 67%);
+}
+.gridContainer :nth-last-child(1):active {
+    background-color: hsl(6, 93%, 67%);
 }
 
 .gridContainer :nth-last-child(2) {
 grid-column: 1 / span 2;
 background-color: hsl(225, 21%, 49%);
 color: hsl(0, 0%, 100%);
+box-shadow: 0 3px hsl(224, 28%, 35%);
+}
+
+.gridContainer :nth-last-child(2):hover {
+    background-color: hsl(224, 51%, 76%);
+}
+
+.gridContainer :nth-last-child(2):active {
+    background-color: hsl(224, 51%, 76%);
 }
 
 .gridContainer :nth-child(4) {
     background-color: hsl(225, 21%, 49%);
     color: hsl(0, 0%, 100%);
+    box-shadow: 0 3px hsl(224, 28%, 35%);
+}
+
+.gridContainer :nth-child(4):hover {
+    background-color: hsl(224, 51%, 76%);
+}
+
+
+.gridContainer :nth-child(4):active {
+    background-color: hsl(224, 51%, 76%);
 }
 
 .button {
     background-color: hsl(30, 25%, 89%);
     border: none;
+    color: hsl(221, 14%, 31%);
+    border-radius: 4px;
+    margin: 5px;
+    padding: .7rem 1.2rem;
+    box-shadow: 0px 3px hsl(28, 16%, 65%);
+    font-size: 1.5rem;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+}
+
+.button:hover {
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+.button:active {
+    background-color: hsl(0, 0%, 100%);
 }

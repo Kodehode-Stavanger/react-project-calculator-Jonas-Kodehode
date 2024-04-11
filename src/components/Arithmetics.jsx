@@ -7,7 +7,7 @@ export default function Arithmetics({input, calculate, setCalculate, result, set
             return;
         }
 
-    const operators = ["+", "-", "*", "/"];
+    const operators = ["+", "-", "x", "/"];
     let operatorIndex = -1;
     let operator = "";
 
@@ -43,7 +43,7 @@ export default function Arithmetics({input, calculate, setCalculate, result, set
         case '-':
             calculationResult = firstNumber - secondNumber;
             break;
-        case '*':
+        case 'x':
             calculationResult = firstNumber * secondNumber;
             break;
         case '/':
