@@ -4,8 +4,8 @@ export default function Display({input, result}) {
     
     return (
         <div className={styles.display}>
-            <h1 className={styles.input}>{input}</h1>
-            <h2 className={styles.result}>{result}</h2>
+            <h1 className={styles.inputResult}>{input}</h1>
+            <h2 className={styles.inputResult}>{result}</h2>
         </div>
     )
 }

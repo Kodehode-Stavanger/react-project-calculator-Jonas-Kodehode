@@ -6,6 +6,7 @@
     background-color: hsl(223, 31%, 20%);
     padding: 1rem;
     border-radius: 6px;
+    gap: 6px;
 }
 
 .gridContainer :nth-last-child(1) {
@@ -64,6 +65,8 @@ box-shadow: 0 3px hsl(224, 28%, 35%);
     font-family: "League Spartan", sans-serif;
     font-weight: 700;
     user-select: none;
+    cursor: pointer;
+
 }
 
 .button:hover {

@@ -12,7 +12,7 @@ function App() {
     const [result, setResult] = useState("")
 
     return (
-        <div className={styles.fullPage}>
+        <div className={styles.calculator}>
         <h2 className={styles.calcText}>calc</h2>
             <Display input={input} result={result}/>
             <Arithmetics input={input} calculate={calculate} setCalculate={setCalculate} setResult={setResult}/>
